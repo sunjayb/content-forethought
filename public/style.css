@@ -1,0 +1,128 @@
+* {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20pt;
+}
+
+body {
+  background: rgb(171,32,176);
+  background: linear-gradient(144deg, rgba(171,32,176,1) 0%, rgba(222,124,42,1) 57%, rgba(240,244,11,1) 100%);
+  color: #FFF;
+  margin-top: 20px;
+  height: 100%;
+}
+
+h1 {
+  font-size: 70pt;
+  font-family: "Amaranth";
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: -15px;
+}
+
+.header-icon {
+  font-size: 70pt;
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+.addtask {
+  text-align: center;
+}
+
+h2 {
+  color: #fff;
+  font-size: 35pt;
+  font-family: "Zen Loop";
+  background: #a81468;
+  padding: 5px 10px;
+  margin: 5px 5px 25px 5px;
+}
+
+.todo {
+  background: #c1396c;
+}
+
+.complete {
+  background: #de7c2a;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.taskbar {
+  background: transparent;
+  padding: 20px;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.newtask {
+  width: 500px;
+  height: 50px;
+  float: center;
+  margin-top: 25px;
+  margin-right: 0px;
+  background: #a81468;
+  border: 0;
+  color: #fff;
+  font-size: 20pt;
+  padding: 5px 10px 5px 10px;
+}
+
+.addbutton {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 0;
+  font-size: 35pt;
+  color: #212121;
+  text-align: center;
+  font-weight: 900;
+  padding: 0;
+}
+
+.align-bottom {
+  margin: auto auto 0 auto
+}
+
+.left {
+  vertical-align: top;
+  width: 47%;
+  background: #212121;
+  padding: 20px;
+  float: left;
+}
+
+.right {
+  vertical-align: top;
+  width: 47%;
+  background: #212121;
+  padding: 20px;
+  float: right;
+}
+
+.check {
+  margin-right: 10px;
+  background: #000;
+}
+
+.checked {
+  margin-right: 15px;
+}
+
+.completed {
+  width: 500px;
+  height: 40px;
+  background: #1bb398;
+  border: 0;
+  font: 15pt "Quicksand";
+  color: #fff;
+  margin-bottom: 10px;
+}
