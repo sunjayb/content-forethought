@@ -2,7 +2,7 @@
   "name": "forethought",
   "version": "0.2.1",
   "description": "A demo to-do application for testing CI/CD platforms and other... platforms.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest"
   },
