@@ -1,0 +1,4 @@
+lanuguage: node_js
+node_js:
+  - "lts/*"
+  
