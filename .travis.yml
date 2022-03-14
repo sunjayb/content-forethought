@@ -1,11 +1,16 @@
 dist: focal
 language: node_js
 node_js:
-  - "lts/*"
-  - node
+- lts/*
 services:
-  - docker
-before_install:
-  - docker build -t forethought .
-  - docker run -d -p 8080:8080 forethought
-  - docker ps -a
+- docker
+before_install: bash docker_init.sh
+jobs:
+  include:
+  - stage: test
+  - stage: deploy
+    script: bash docker_push.sh
+env:
+  global:
+  - secure: q/oAn2PO6lOkhSeQl36UrLieymy1qE9kNm3klTvZo4sic1gJ0McOu2pdr/pMfnAmr8JQpMZfH73mDCKGgObcS1NO6c0zdew+kz8P01nP8vDr68S7L2PXB0BIR6BZ54ryErS8zPNHc9WYbUOBwnrajiPh8zYY3gCpnGXDsFJ1mStYjCNu3iNV4t2dJw7PrrVajSDqOz1KyzWvqzrR7VuffvzwDq7NnAHhC4XJIhthmFQVURbNx9RY6TF2u/kt8dras5AcYdd9hOWmNaCH37Ojftb8GrvK4abvTPbln5ywsaIsbPO7l6RU2fRxPgkbkz+poD5ZSuIh/EZTSt46a6nUCpXkFHzKFOr6stapKdeZ3K9Ow8M4LDjewkySoB75XYYMMfy4oEsBisgnBsnoDZQbTY15us+unBWLN0W/9RJUof8gnvPOfBzmbp5xLLqS1nawMF9M90CzcxXT9FRVMMcbY2B23GMEX+sCFTgfD7YBHgvJWWGZ0Uehmpb9ZcM872bF0CfKwzWyBA/8VitJq3hLGEDEK97mbaDA/mAtu75GRMhfOmLL6oKjK7kZudYz05did/pRru461zebYXAL7TJuF3g0fNxNNLsOVMUhf54kfy/e2Q+q+yv18ASO0QGnerrrzslZW7w0vW/AqztSqfBnvqamnI7K2gQ/TaIsZt5LDhw=
+  - secure: s2Mju02prGL5bbq8VjZvPun3wdBVhD+zbT4sYahmhVu+6/7OaayWW42JIpHE9dBynmIxXtTgf/sM7gJXGIDVcsQKog50xBtkV4zEDTDIsK4pBv1QSudtznhhIgIbod6Y1Jv+nE9F6w4vYLM9f4kSHXmzTu5jgbwH5NYqVBumWJOef1d+V/GrTsizi5h9tYyMYMGg8DqfWHX8Vc9McfRr0MEeUeRMWg3lh986WGVMoWWn5lS5ii61XpgEqTGDrvVZ6U+LD5x8qstzSrJpj989Ge0cyCByrtFfF0oRt5Wu07FQu/E4GzPoL3RXKcFr4AtggZwJk6PbBmvqRO311luQ2JMIsmvyDrdr2DdscyPke9ijW7Vlw3gFPV1nBFTpqkcPyGYIgIjzkfzU8D6b25QhteDdMHyvnm2iHw3V2MHSL3/d0KDLTKGPQ7V4JJuK1QzCUz1NO5G16pfO4je4Ejz8a/7wtj+uehlOG+FGaqj3XRup86Hb87ziHNxjtlWR6k1WGoywEVI71o9IusdGxjLeCmDWlo799ydTDfST8/4pbTbDp7mIYS2QtM5gYaYWJukXZkT3LVet3lJ1djEgluERAEoFNFDUbzTo587vgSeHaY6iBwfvKYU3gwbYU+WIKgZ43yeEtLsE/6Xp/5Fk0mOdXSWfknbltrgRs2jO1M4SCgI=
